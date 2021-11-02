@@ -11,6 +11,7 @@
                     <div class="card-header d-flex justify-content-center p-2">
                         <p class="text-dark" style="font-weight: bold;">Farmer {{ vm.currentUser.name }} </p>
                          <!--<input type="text" name="" placeholder=" {{ vm.currentUser.email }}"> -->
+                         <input type="hidden" id="userEmail" value="{{ vm.currentUser.email }}"> 
                     </div>
                     <div class="card-text d-flex justify-content-center p-4">
                         <p style="font-size: 12px;">Welcome to Farmers eMarket</p>
@@ -77,14 +78,15 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header" style="background-color: #1e656d !important;">
+                    <!--<div class="modal-header" style="background-color: #1e656d !important;">
                         <h5 class="modal-title" style="color: white !important;" id="exampleModalLabel">Edit Product</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
+                    </div>-->
                     <div class="modal-body">
                        <form id="editProductForm" method="post">
                             <div class="card shadow-sm my-3">
-                                <div>
+                                <div class="card-header justify-content-center" style="background-color: #1e656d;">
+                                    <h5 style="color: white !important; " >Edit Product</h5> 
                                   <!--<h6> Data buanj {{ metadata.name }} </h5> -->
                                 </div>
                                 <div class="card-body p-3">
@@ -123,7 +125,8 @@
                                   </div>
                                 </div>
                                 <div class="">
-                                    <button type="button" class="btn btn-secondary" id="closeBtn" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" 
+                                    id="closeBtn" data-bs-dismiss="modal" ng-click="vm.closeModal()">Close</button>
                                     <button type="submit" class="btn btn-primary" id="signBtn">Confirm changes</button>
                                 </div>
                               

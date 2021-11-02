@@ -85,7 +85,20 @@
           console.log(err);
         });
     } */
+    vm.closeModal = function(){
+      product.productList(vm.formData.clientName.email)
+      .then(function successCallback(response) {
+        var data = response.data;
+        vm.data = { products: data };
+        console.log("The retrieved after modal close are ", response.data);
+        console.log("the  name is ", response.data.name);
 
+      },
+        function errorCallback(response) {
+          vm.formError = "No such data";
+          console.log(response);
+        });
+    }
     //product to remove 
     vm.removeProduct = function (id) {
       console.log("The product id is ko" + id)
