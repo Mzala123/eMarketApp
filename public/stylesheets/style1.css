@@ -1,0 +1,233 @@
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  overflow-x: hidden;
+  font-size: 14px;
+  font-weight: 350px;
+ /* background: url('../images1/Mainbg2.png') no-repeat fixed;
+  background-size: cover;*/
+  background-color:whitesmoke;
+ }
+
+ .top-bar{
+   background:seagreen;
+   height:2.3rem;
+   padding: .5rem 0;
+ }
+ .top-bar a{
+   color: white;
+   text-decoration: none;
+ }
+
+ #carousel-image{
+  background: url('../images1/about.jpeg');
+  height: 60vh;
+  background-size: cover;
+ }
+ #carousel-image1{
+  background: url('../images1/ubwinok.jpg');
+  height: 60vh;
+  background-size: cover;
+ }
+.carousel-inner{
+  max-height: 38rem!important;
+}
+
+.carousel-caption{
+  position: absolute;
+  top: 54%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+}
+.carousel-caption h3{
+    text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 1);
+    /*font-size:3.8rem;  */
+}
+.carousel-caption h6{
+  text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 1);
+  /*font-size:3.8rem;  */
+}
+
+.bg-custom{
+  background-color: rgba(0, 0, 0, .4);
+  border-radius: 1rem;
+  line-height: 10px;
+}
+
+
+ #carouselHome{
+  background: url('../images1/firstCourasel1.png');
+  height: 80vh;
+  background-size: cover;
+}
+#carouselHome1{
+  background: url('../images1/firstCourasel.png');
+  height: 80vh;
+  background-size: cover;
+}
+#carouselHome1{
+  background: url('../images1/firstCourasel2.png');
+  height: 80vh;
+  background-size: cover;
+}
+
+
+#images-home{
+  background: url('../images1/first.jpg');
+  height: 70vh;
+  background-size: cover;
+  box-shadow:.1rem .1rem .3rem rgba(0, 0, 0, .4);
+  
+}
+#images-home1{
+  background: url('../images1/ubwinoy.jpg');
+  height: 70vh;
+  background-size: cover;
+  box-shadow:.1rem .1rem .3rem rgba(0, 0, 0, .4);
+  
+}
+#images-home2{
+  background: url('../images1/ubwinoc.jpg');
+  height: 70vh;
+  background-size: cover;
+  /*border-radius: 10px;*/
+  box-shadow:.1rem .1rem .3rem rgba(0, 0, 0, .4);
+  
+}
+
+#images-home4{
+  background: url('../images1/ubwinoa.jpg');
+  height: 70vh;
+  background-size: cover;
+  /*border-radius: 10px;*/
+  box-shadow:.1rem .1rem .3rem rgba(0, 0, 0, .4);
+}
+#images-home5{
+  background: url('../images1/ubwinob.jpg');
+  height: 70vh;
+  background-size: cover;
+  /*border-radius: 10px;*/
+  box-shadow:.1rem .1rem .3rem rgba(0, 0, 0, .4);
+}
+#images-home6{
+  background: url('../images1/ubwinok.jpg');
+  height: 70vh;
+  background-size: cover;
+  /*border-radius: 10px;*/
+  box-shadow:.1rem .1rem .3rem rgba(0, 0, 0, .4);
+}
+/*#tokometsa{
+  border-radius: 10px;
+  margin:2px;
+  box-shadow:.1rem .1rem .3rem rgba(0, 0, 0, .5);
+}*/
+
+ #identifierImage{
+  background: url('../images1/Mainbg2.png');    
+  height: 6vh;
+  background-size: cover;    
+ }
+ .carousel-item{
+   border-radius: 4px;
+ }
+
+ .navbar-brand {
+  color: #FFF !important;
+  font-size: 22px;
+  line-height: 1.2;
+  text-decoration: none !important;
+ }
+  .navbar-brand span {
+    font-size: 24px;
+    color: #fac564; }
+  .navbar-brand small {
+    text-transform: uppercase;
+    font-size: 10px;
+    display: block;
+    /*text-align: center;*/
+    color: #fac564;
+    letter-spacing: 4px; 
+  } 
+
+  .nav-item{
+    color: #fff;
+  }
+
+  .navbar ul li a {
+    color: #FFF !important;
+    font-size: 14px;
+    text-decoration: none; 
+  }
+  .navbar ul li a:hover{
+    color: #fac564 !important;
+  }
+
+  a {
+    color: #fac564;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects; }
+    a:hover {
+      color: #fac564;
+      text-decoration: underline; 
+    }
+      
+.btn-primary {
+        color: #020202;
+        background-color: #fac564;
+        border-color:#fac564;
+        font-size:12px;
+        height: 30px;
+        border-radius: 0px !important;
+       }
+.btn-primary:hover {
+          color: #fac564;
+          background-color: #eff4f5;
+          border-color: #fac564; 
+  }
+
+.btn-danger{
+  background-color: #dd2e2e;
+  border-color:#dd2e2e;
+  font-size:12px;
+  height: 30px;
+  width:110px;
+  border-radius: 0px !important;
+}
+.btn-primary:focus, .btn-primary.focus {
+          -webkit-box-shadow: 0 0 0 0.2rem rgba(120, 213, 239, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(120, 213, 239, 0.5); 
+}
+
+
+#navBarFlex{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content:space-between ;
+}
+
+#about_card {
+  background-color: transparent;
+}
+
+.navbar-toggler{
+  background-color: #eff4f5;
+  
+}
+.navbar-toggler-icon{
+  background-color: #eff4f5;
+}
+
+#appointmentBtn{
+  color: #ffffff;
+  border-color:#fac564;
+  font-size:12px;
+  height: 30px;
+}
+#appointmentBtn:hover {
+  color: #000000;
+  background-color: #eff4f5;
+  border-color: #fac564;
+
+  /*border-radius: 0px;*/ 
+}

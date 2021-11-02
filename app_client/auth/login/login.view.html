@@ -1,0 +1,50 @@
+<navigation></navigation>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-5">
+            <div class="card o-hidden border-0 shadow-sm my-5">
+                <div class="card-body p-0">
+                            <div class="p-5">
+                                <div class="text-center">
+                                     <h1 class="h4 text-dark pb-4" style="color: #1e656d;">Farm Products eMarket</h1>
+                                </div>
+                                <form ng-submit="vm.onSubmit()">
+                                    <div role="alert" ng-show="vm.formError" class="alert alert-danger"> 
+                                        {{ vm.formError }}</div>
+                                    <div class="form-group mb-3">
+                                        <input type="email" class="form-control"
+                                            id="email" aria-describedby="emailHelp"
+                                            placeholder="Enter Email" name="email"
+                                            ng-model="vm.credentials.email">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="password" placeholder="Password" name="password"
+                                            ng-model="vm.credentials.password">
+                                    </div>
+                                    <!--<ul>
+                                        <li ng-repeat=" login in vm.data.loginData">
+                                              
+                                            <div role="text" ng-model=""> 
+                                                {{login.userRole}}
+                                           </div> 
+                                        </li>
+                                    </ul> -->
+                                    
+                                    <div class="d-grid mb-3">
+                                        <button type="submit"  class="btn btn-primary" id="signBtn">
+                                            Sign In
+                                       </button>
+                                    </div>
+                                </form>
+                                <hr>
+                                <div class="text-center text-dark" style="font-weight: bold;">
+                                  Don't have an account? <a class="small" href="/#register?page={{ vm.returnPage }}">Sign Up</a>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer-generic></footer-generic>
