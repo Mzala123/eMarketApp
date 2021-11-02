@@ -24,19 +24,13 @@ function selectRecord() {
 }
 
 function editProductRecord() {
-    $(document).on("click", "#editProductForm", function (e) {
+    $(document).on("submit", "#editProductForm", function (e) {
         e.preventDefault();
         var id = $('#id').val();
         var name = $("#name").val();
         var price = $("#price").val();
         var quantity = $("#quantity").val();
         var description= $("#description").val();
-        var formData = {
-            name,
-            price,
-            quantity,
-            description
-        }
         console.log("product id to edit is" + id);
         $.ajax({
             type: "PUT",
