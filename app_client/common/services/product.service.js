@@ -15,8 +15,8 @@
              return $http.get('/api/product?email='+email);
           }
 
-          var editProduct = function(productid){
-            return $http.put('/api/product/'+productid);
+          var editProduct = function(productid,productData){
+            return $http.put('/api/product/'+productid+'',productData);
           }
           var deleteProduct = function(productid){
             return $http.delete('/api/product/'+productid);

@@ -1,11 +1,4 @@
 $(document).ready(function () {
-  /*  const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000
-    });*/
-
     selectRecord();
     editProductRecord();
 });
@@ -31,29 +24,47 @@ function selectRecord() {
 }
 
 function editProductRecord() {
-    $(document).on("click", "#editProductForm", function () {
-        //var firstname = $('#firstname').val();
+    $(document).on("click", "#editProductForm", function (e) {
+        e.preventDefault();
         var id = $('#id').val();
         var name = $("#name").val();
         var price = $("#price").val();
         var quantity = $("#quantity").val();
         var description= $("#description").val();
+        var formData = {
+            name,
+            price,
+            quantity,
+            description
+        }
         console.log("product id to edit is" + id);
         $.ajax({
             type: "PUT",
             url: '/api/product/'+id,
-            dataType: 'text',
-            cache: false,
-            contentType: false,
-            data: new FormData(this),
-            processData: false,
-            success: function(dataResult){
-                var result = JSON.parse(dataResult);
-                if(result.statusCode === 200){
-                    alert("product edited successfully");
-                }else{
-                   alert("failed to edit a product");
-                }
+            dataType: 'JSON',
+            contentType: "application/json",
+            data: JSON.stringify({
+               name: name,
+               quantity: quantity,
+               description: description,
+               price: price
+               //id: id
+            }),
+            success: function(){
+                swal({
+                    title: "updating a product!",
+                    text: "Product edited successfully",
+                    icon: "success",
+                    button: "Yes"
+                  })
+            }, 
+            error: function(){
+                swal({
+                    title: "updating a product",
+                    text: "Failed to update a product",
+                    icon: "error",
+                    button: "0k"
+                  });
             }
         })
     });
