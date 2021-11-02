@@ -32,7 +32,7 @@
 
     // edit product
 
-    vm.onSubmit = function () {
+   /* vm.onSubmit = function () {
       if (!vm.formData.name || !vm.formData.quantity || !vm.formData.price || !vm.formData.description) {
         swal({
           title: "updating a product!",
@@ -44,7 +44,7 @@
       else {
         vm.doUpdateProduct();
       }
-    }
+    }*/
   
     /*vm.editProduct = function (productId) {
       vm.doUpdateProduct(productId);
@@ -59,7 +59,7 @@
           function errorCallback(response) {
 
           })
-    }*/
+    }
     // product to edit
     
     // welcome to editing
@@ -84,7 +84,7 @@
           });
           console.log(err);
         });
-    }
+    } */
 
     //product to remove 
     vm.removeProduct = function (id) {

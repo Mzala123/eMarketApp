@@ -82,7 +82,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                       <form ng-submit="vm.onSubmit()">
+                       <form ng-submit="vm.onSubmit()" id="editProductForm" method="post">
                             <div class="card shadow-sm my-3">
                                 <div>
                                   <!--<h6> Data buanj {{ metadata.name }} </h5> -->
@@ -92,7 +92,8 @@
                                   background-color: #1e656d; color: white;">
                                     <h4>Create a Product</h4>
                                   </div>-->
-                                  <input type="hidden" name="" id="id" ng-model="vm.formData.productId">
+                                  <input type="hidden" name="" id="id" value={{product._id}} 
+                                  ng-model="vm.formData.productId">
                                 <div class="row">
                                   <div class="col-md-6 form-group mb-4">
                                     <label for="" class="col-form-label">Product Name*</label>
@@ -123,7 +124,7 @@
                                 </div>
                                 <div class="">
                                     <button type="button" class="btn btn-secondary" id="closeBtn" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary" id="signBtn">Confirm changes</button>
+                                    <button type="button" class="btn btn-primary" id="signBtn">Confirm changes</button>
                                 </div>
                               
                             </div>
