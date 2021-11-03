@@ -25,8 +25,8 @@
                 return false;
             }
             else {
-               //vm.trialLogin();
-               vm.doLogin();
+               vm.trialLogin();
+               //vm.doLogin();
             }
         };
       
@@ -36,10 +36,15 @@
             .then(function successCallback(response){
              var data ={};
              data = response.data;
-             console.log("login data ", response.data);
+             console.log("login data ", response.data[0].userRole);
              vm.data = {loginData: data};
-             vm.credentials.userRole = response.data.userRole ;
-             console.log("the retrieved userrole is", vm.credentials.userRole);
+             var userRole = response.data[0].userRole;
+               if(userRole == "Farmer"){
+                    vm.doLogin();
+               }
+               else if(userRole == "Buyer"){
+                    vm.doLogin1();
+               }
             }
            ,function errorCallback(response) {
             vm.formError = "No such data";

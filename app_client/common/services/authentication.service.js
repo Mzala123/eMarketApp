@@ -5,13 +5,14 @@
 
        authentication.$inject = ['$http', '$window'];
        function authentication($http, $window){
-           var saveToken = function(token){
+            var saveToken = function(token){
              $window.localStorage['ubwino-token'] = token;
             };
 
             var getToken = function(){
                 return $window.localStorage['ubwino-token'];
             }
+
 
             var isLoggedIn = function(){
              var token = getToken();

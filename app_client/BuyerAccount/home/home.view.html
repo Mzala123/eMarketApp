@@ -1,0 +1,50 @@
+<buyernavigation></buyernavigation>
+<div class="container-fluid">
+    <div class="row">
+        <!--<div class="col-12 col-md-4 col-lg-3">
+            <div class="card shadow-sm my-3">
+                <div class="card-body p-2">
+                    <img id="identifierImage" class="card-img-top">
+                    <div class="card-header  d-flex justify-content-center p-1">
+                        <i class="fa fa-user-circle" style="font-size:60px;color:#1e656d;"></i>
+                    </div>
+                    <div class="card-header d-flex justify-content-center p-2">
+                        <p ng-model="vm.formData.clientName" class="text-dark" style="font-weight: bold;">
+                          Farmer {{ vm.currentUser.name }} </p>
+                    </div>
+                    <div class="card-text d-flex justify-content-center p-4">
+                        <p style="font-size: 12px;">Welcome to Farmers eMarket</p>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+   
+     <!--<div class="row justify-content-center"> -->
+    
+      <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="product in vm.data.products
+      | filter : textFilter">
+      
+       <div class="card m-1 shadow-sm">
+           <div class="card-header" style="background-color: #1e656d!important ; color: white;">
+              Product : {{ product.name}}
+           </div>
+           <div class="card-body" style="background-color:  #ecf2f3 !important;">
+              <p>Product Description: {{ product.description }}</p>
+              <p><h6 style="font-weight: bold;">Price(MK) : {{ product.price }} </h6></p>
+           </div>
+           <div class="card-footer">
+            <span class="badge pull-right badge-default"> 
+             <button class="btn btn-outline-warning"
+                   ng-click="vm.addToCart(product._id)"> Add<i class="fa fa-cart-plus"></i></button>
+             </span>
+           </div>
+       </div>
+      </div>
+   
+    <!--</div> -->
+
+  </div>
+
+</div>
+<footer-generic></footer-generic>

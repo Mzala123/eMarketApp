@@ -45,7 +45,22 @@
           templateUrl: '/featuredProducts/products.view.html',
           controller: 'featuredCtrl',
           controllerAs: 'vm'
-       })
+       }) 
+       .when('/buyer', {
+        templateUrl: '/BuyerAccount/home/home.view.html',
+        controller: 'buyerCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/buyerdashboard', {
+        templateUrl: '/BuyerAccount/dashboard/dashboard.view.html',
+        controller: 'dashboardCtrl',
+        controllerAs: 'vm'
+      })
+      .when('/cart', {
+        templateUrl: '/BuyerAccount/cart/cart.view.html',
+        controller: 'cartCtrl',
+        controllerAs: 'vm'
+      })
 
       .otherwise({ redirectTo: '/' });
       $locationProvider.html5Mode({

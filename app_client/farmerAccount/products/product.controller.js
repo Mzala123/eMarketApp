@@ -90,7 +90,7 @@
       .then(function successCallback(response) {
         var data = response.data;
         vm.data = { products: data };
-        console.log("The retrieved after modal close are ", response.data);
+        console.log("The retrieved after modal close are  ", response.data);
         console.log("the  name is ", response.data.name);
 
       },
