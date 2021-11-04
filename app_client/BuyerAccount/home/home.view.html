@@ -27,17 +27,23 @@
       
        <div class="card m-1 shadow-sm">
            <div class="card-header" style="background-color: #1e656d!important ; color: white;">
+            <input type="hidden" id="farmer" value="{{product.clientName}}">
+              Farmer: {{ product.clientName }}
+              <br>
+              <input type="hidden" id="name" value="{{product.name}}">
               Product : {{ product.name}}
            </div>
            <div class="card-body" style="background-color:  #ecf2f3 !important;">
               <p><img src="" id="productImage"></p>
+              <input type="hidden" id="description" value="{{product.description}}">
               <p>Product Description: {{ product.description }}</p>
+              <input type="hidden" id="price" value="{{product.price}}">
               <p><h6 style="font-weight: bold;">Price(MK) : {{ product.price }} </h6></p>
            </div>
            <div class="card-footer">
             <span class="badge pull-right badge-default"> 
              <button class="btn btn-outline-warning"
-                   ng-click="vm.addToCart(product._id)"> Add<i class="fa fa-cart-plus"></i></button>
+                   id="addToCart" data-id="id" value={{product._id}} data-id1="name" data-id2="price" data-id3="description"> Add<i class="fa fa-cart-plus"></i></button>
              </span>
            </div>
        </div>

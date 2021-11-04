@@ -34,7 +34,7 @@
           console.log(response);
         });
 
-    vm.addToCart = function (productid) {
+   /* vm.addToCart = function (productid) {
       console.log("the product to be added to cart is " + productid);
       var name ="";
       var price ="";
@@ -65,18 +65,10 @@
         },
           function errorCallback(response) {
 
-        })
-      /*cartProducts.productid.push({
-        productid
-      })*/
-      
-     // console.log(cartProducts);
-      /*localStorage.setItem('cart_ids', JSON.stringify(cartProducts));
-      var prods = JSON.parse(localStorage.getItem('cart_ids'));
-      console.log("PRODS",prods);
-      console.log("PRODS",prods.productid);*/
+        }) 
+     
 
-    }
+    }*/
 
 
   }
