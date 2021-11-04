@@ -14,6 +14,7 @@
 </div>
 <div class="container-fluid">
   <div class="row justify-content-center">
+
     <div class="col-lg-3 col-md-4 col-sm-6" ng-repeat="product in vm.data.products
     | filter : textFilter">
     
@@ -22,15 +23,21 @@
             Product : {{ product.name}}
          </div>
          <div class="card-body" style="background-color:  #ecf2f3 !important;">
-            <p>Product Quantity : {{ product.quantity }}</p>
+            <p><img src="" id="productImage"></p>
             <p>Product Description: {{ product.description }}</p>
+            <p><h6 style="font-weight: bold;">Price(MK) : {{ product.price }} </h6></p>
          </div>
          <div class="card-footer">
-            <p>Product Price(MK) : {{ product.price }}</p>
+          <span class="badge pull-right badge-default"> 
+            <a href="/#login">
+           <button class="btn btn-outline-warning"> Add<i class="fa fa-cart-plus"></i></button></a>
+           </span>
          </div>
      </div>
     </div>
   </div>
+
+  
 
    
 </div>
