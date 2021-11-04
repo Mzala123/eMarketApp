@@ -14,7 +14,7 @@
     vm.formData = {};
     vm.formData.clientName = authentication.currentUser();
     console.log(vm.formData.clientName.email);
-
+    var prods;
     product
       .findAllProducts()
       .then(function successCallback(response) {
@@ -49,8 +49,8 @@
             price: price,
             description: description
           })
-          sessionStorage.setItem(productid, JSON.stringify(cartProducts));
-          var prods =JSON.parse(sessionStorage.getItem(sessionStorage.key(index)));
+          localStorage.setItem(productid, JSON.stringify(cartProducts));
+          prods =JSON.parse(sessionStorage.getItem(sessionStorage.key(index)));
           console.log("PRODS",prods);
           console.log("PRODS",sessionStorage.length);      
           for(var index=0; index <sessionStorage.length; index++){
@@ -65,6 +65,20 @@
 
         }) 
      
+    }
+
+    vm.removeFromCart = function(productid){
+      console.log("the product to remove from session"+productid);
+      var product = prods;
+      sessionStorage.removeItem(productid);
+      console.log(product)
+      for(var index=0; index <sessionStorage.length; index++){
+        console.log("The remaining products in localstorage are");
+        var obj = JSON.parse(sessionStorage.getItem(sessionStorage.key(index)));
+        console.log(obj)
+        vm.data = { products : obj}
+      }
+      console.log("Tafika pano");
     }
 
 
