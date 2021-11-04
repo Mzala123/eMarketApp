@@ -68,7 +68,6 @@ function viewProductCart(){
 
 function removeCartItem(){
     $(document).on("click","#removeProduct", function(){
-        //alert("Tafika muno ?")
         var id = $(this).val();
         console.log(id);
         sessionStorage.removeItem(id);
