@@ -15,12 +15,6 @@
     vm.formData.clientName = authentication.currentUser();
     console.log(vm.formData.clientName.email);
 
-    /*var cartProducts = {
-      productid: [
-
-      ]
-    };*/
-
     product
       .findAllProducts()
       .then(function successCallback(response) {
@@ -34,7 +28,7 @@
           console.log(response);
         });
 
-   /* vm.addToCart = function (productid) {
+    vm.addToCart = function (productid) {
       console.log("the product to be added to cart is " + productid);
       var name ="";
       var price ="";
@@ -49,26 +43,29 @@
           name = response.data.name;
           price = response.data.price;
           description = response.data.description;
-          console.log("The product to be stored in localstorage is", response.data);
-          console.log("The product to be stored in localstorage is", name);
-          console.log("The product to be stored in localstorage is", price);
            cartProducts.products.push({
             productid: productid,
             name: name,
             price: price,
             description: description
           })
-          localStorage.setItem('cart_ids', JSON.stringify(cartProducts));
-      var prods = JSON.parse(localStorage.getItem('cart_ids'));
-      console.log("PRODS",prods);
-      console.log("PRODS",prods.products[0].productid);
+          sessionStorage.setItem(productid, JSON.stringify(cartProducts));
+          var prods =JSON.parse(sessionStorage.getItem(sessionStorage.key(index)));
+          console.log("PRODS",prods);
+          console.log("PRODS",sessionStorage.length);      
+          for(var index=0; index <sessionStorage.length; index++){
+           
+            //console.log("The produts in localstorage are");
+            var obj = JSON.parse(sessionStorage.getItem(sessionStorage.key(index)));
+            console.log(obj)
+            vm.data = { products : obj}
+          }
         },
           function errorCallback(response) {
 
         }) 
      
-
-    }*/
+    }
 
 
   }

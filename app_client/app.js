@@ -58,7 +58,7 @@
       })
       .when('/cart', {
         templateUrl: '/BuyerAccount/cart/cart.view.html',
-        controller: 'cartCtrl',
+        controller: 'buyerCtrl',
         controllerAs: 'vm'
       })
 

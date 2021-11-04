@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    addToCart();
+   /* addToCart();
     viewProductCart();
     removeCartItem();
-    console.log()
+    console.log()*/
 });
 
 function addToCart(){
